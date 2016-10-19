@@ -29,43 +29,9 @@ function Player(position, canvas) {
   this.thrusting = false;
   this.steerLeft = false;
   this.steerRight = false;
-
-  var self = this;
-  window.onkeydown = function(event) {
-    switch(event.key) {
-      case 'ArrowUp': // up
-      case 'w':
-        self.thrusting = true;
-        break;
-      case 'ArrowLeft': // left
-      case 'a':
-        self.steerLeft = true;
-        break;
-      case 'ArrowRight': // right
-      case 'd':
-        self.steerRight = true;
-        break;
-    }
-  }
-
-  window.onkeyup = function(event) {
-    switch(event.key) {
-      case 'ArrowUp': // up
-      case 'w':
-        self.thrusting = false;
-        break;
-      case 'ArrowLeft': // left
-      case 'a':
-        self.steerLeft = false;
-        break;
-      case 'ArrowRight': // right
-      case 'd':
-        self.steerRight = false;
-        break;
-    }
-  }
 }
-
+  var self = this;
+  
 
 
 /**
@@ -131,3 +97,4 @@ Player.prototype.render = function(time, ctx) {
   }
   ctx.restore();
 }
+
